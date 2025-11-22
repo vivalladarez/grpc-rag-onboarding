@@ -6,8 +6,8 @@ Sistema RAG (Retrieval-Augmented Generation) para onboarding corporativo com **d
 
 ## Arquiteturas
 <div align="center">
-  <img width="553" height="389" alt="image" src="https://github.com/user-attachments/assets/4a5e5d36-767e-451b-8d56-73562ea8045c" />
-</div>
+  <img width="553" height="389" alt="image" src="https://github.com/user-attachments/assets/919dc353-7298-4d78-989b-7795f0c7a93b" />
+</div>]
 
 ## Estrutura do Projeto
 
