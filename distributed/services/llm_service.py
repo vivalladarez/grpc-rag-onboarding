@@ -18,16 +18,16 @@ from shared.llm import OllamaLLM
 class LLMServicer(llm_service_pb2_grpc.LLMServiceServicer):
     def __init__(self):
         self.llm = OllamaLLM()
-        print(f"✅ LLM Service pronto!")
+        print("LLM Service inicializado.")
     
     def Generate(self, request, context):
         try:
-            print(f"📡 Generate: {len(request.prompt)} chars")
+            print(f"Generate solicitado com {len(request.prompt)} caracteres")
             temp = request.temperature if request.temperature > 0 else 0.7
             text = self.llm.generate(request.prompt, temp)
             return llm_service_pb2.GenerateResponse(text=text)
         except Exception as e:
-            print(f"❌ Erro: {e}")
+            print(f"Erro durante Generate: {e}")
             context.set_code(grpc.StatusCode.INTERNAL)
             return llm_service_pb2.GenerateResponse()
 
@@ -41,7 +41,7 @@ def serve():
     server.start()
     
     print("\n" + "="*60)
-    print("🔵 LLM SERVICE RODANDO (gRPC)")
+    print("LLM Service rodando (gRPC)")
     print("="*60)
     print("   Porta: 50053")
     print("="*60 + "\n")
@@ -49,7 +49,7 @@ def serve():
     try:
         server.wait_for_termination()
     except KeyboardInterrupt:
-        print("\n🛑 Parando LLM Service...")
+        print("\nParando LLM Service...")
 
 
 if __name__ == '__main__':

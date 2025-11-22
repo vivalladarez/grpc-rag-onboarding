@@ -3,16 +3,18 @@ API FastAPI Monolítica
 Porta: 8001
 """
 
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import Optional, List, Dict, Any
+
 import sys
 from pathlib import Path
 
 # Adicionar path para acessar módulo shared
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from typing import Optional, List, Dict, Any
 from rag_pipeline import get_pipeline
+from shared.path_utils import resolve_directory_path
 
 app = FastAPI(title="RAG Monolithic API", version="1.0.0")
 
@@ -56,8 +58,11 @@ def query(request: QueryRequest):
 def ingest(request: IngestRequest):
     try:
         pipeline = get_pipeline()
-        result = pipeline.ingest_documents(directory_path=request.directory_path)
+        directory = resolve_directory_path(request.directory_path)
+        result = pipeline.ingest_documents(directory_path=str(directory))
         return result
+    except (FileNotFoundError, NotADirectoryError, ValueError) as e:
+        raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -80,6 +85,6 @@ def stats():
 
 if __name__ == "__main__":
     import uvicorn
-    print("\n🚀 Iniciando API Monolítica na porta 8001...")
+    print("\nIniciando API Monolítica na porta 8001...")
     uvicorn.run(app, host="0.0.0.0", port=8001)
 

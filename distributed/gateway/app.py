@@ -77,6 +77,6 @@ def stats():
 
 if __name__ == "__main__":
     import uvicorn
-    print("\n🚀 Iniciando Gateway Distribuído na porta 8002...")
+    print("\nIniciando Gateway Distribuído na porta 8002...")
     uvicorn.run(app, host="0.0.0.0", port=8002)
 

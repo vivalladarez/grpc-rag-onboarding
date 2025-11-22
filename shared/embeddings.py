@@ -14,10 +14,10 @@ class EmbeddingModel:
         if model_name is None:
             model_name = os.getenv('EMBEDDING_MODEL', 'intfloat/multilingual-e5-small')
         
-        print(f"📦 Carregando modelo: {model_name}")
+        print(f"Carregando modelo de embeddings: {model_name}")
         self.model = SentenceTransformer(model_name)
         self.model_name = model_name
-        print("✅ Modelo carregado!")
+        print("Modelo de embeddings carregado com sucesso.")
     
     def embed_query(self, query: str) -> List[float]:
         """Gera embedding para query"""

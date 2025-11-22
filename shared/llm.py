@@ -20,8 +20,8 @@ class OllamaLLM:
         self.model = model
         self.generate_url = f"{self.base_url}/api/generate"
         
-        print(f"🤖 Ollama: {self.base_url}")
-        print(f"📝 Modelo: {self.model}")
+        print(f"Ollama endpoint: {self.base_url}")
+        print(f"Modelo carregado: {self.model}")
     
     def check_connection(self) -> bool:
         """Verifica se Ollama está acessível"""
@@ -41,15 +41,15 @@ class OllamaLLM:
         }
         
         try:
-            print(f"🔄 Gerando resposta...")
+            print("Gerando resposta com o LLM...")
             response = requests.post(self.generate_url, json=payload, timeout=120)
             response.raise_for_status()
             result = response.json()
             generated_text = result.get('response', '')
-            print(f"✅ Resposta gerada ({len(generated_text)} chars)")
+            print(f"Resposta gerada ({len(generated_text)} caracteres)")
             return generated_text
         except Exception as e:
-            error_msg = f"❌ Erro: {str(e)}"
+            error_msg = f"Erro ao gerar resposta: {str(e)}"
             print(error_msg)
             return error_msg
 

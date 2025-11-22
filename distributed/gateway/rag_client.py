@@ -17,6 +17,7 @@ from generated import (
     llm_service_pb2, llm_service_pb2_grpc
 )
 from shared.ingest import process_documents_for_ingestion
+from shared.path_utils import resolve_directory_path
 
 
 class RAGDistributedClient:
@@ -24,7 +25,7 @@ class RAGDistributedClient:
     
     def __init__(self):
         print("\n" + "="*60)
-        print("🌐 INICIALIZANDO CLIENTE gRPC DISTRIBUÍDO")
+        print("INICIALIZANDO CLIENTE gRPC DISTRIBUÍDO")
         print("="*60)
         
         # Conectar aos serviços gRPC
@@ -39,33 +40,40 @@ class RAGDistributedClient:
         self.top_k = int(os.getenv('TOP_K_RESULTS', '5'))
         self.max_context_length = int(os.getenv('MAX_CONTEXT_LENGTH', '2000'))
         
-        print("   📡 Embedding Service: localhost:50051")
-        print("   📡 Vector Service: localhost:50052")
-        print("   📡 LLM Service: localhost:50053")
+        print("   Embedding Service: localhost:50051")
+        print("   Vector Service: localhost:50052")
+        print("   LLM Service: localhost:50053")
         print("="*60)
-        print("✅ CLIENTE gRPC PRONTO!")
+        print("CLIENTE gRPC PRONTO!")
         print("="*60 + "\n")
     
     def ingest_documents(self, file_paths: List[str] = None, 
                         directory_path: str = None) -> Dict[str, Any]:
         """Ingere documentos via gRPC"""
-        print("\n📥 Ingestão Distribuída (gRPC)")
+        print("\nIngestão Distribuída (gRPC)")
         
-        texts, metadatas = process_documents_for_ingestion(file_paths, directory_path)
+        resolved_directory = None
+        if directory_path:
+            try:
+                resolved_directory = str(resolve_directory_path(directory_path))
+            except (FileNotFoundError, NotADirectoryError, ValueError) as e:
+                return {"status": "error", "message": str(e)}
+        
+        texts, metadatas = process_documents_for_ingestion(file_paths, resolved_directory)
         
         if not texts:
             return {"status": "error", "message": "Nenhum documento"}
         
         try:
             # 1. Gerar embeddings via gRPC
-            print(f"📡 [gRPC] Gerando embeddings...")
+            print(f"[gRPC] Gerando embeddings...")
             embed_request = embedding_service_pb2.EmbedTextsRequest(texts=texts)
             embed_response = self.embedding_stub.EmbedTexts(embed_request)
             embeddings = [list(emb.values) for emb in embed_response.embeddings]
-            print(f"   ✅ {len(embeddings)} embeddings recebidos")
+            print(f"   {len(embeddings)} embeddings recebidos")
             
             # 2. Adicionar ao vector store via gRPC
-            print(f"📡 [gRPC] Adicionando ao vector store...")
+            print(f"[gRPC] Adicionando ao vector store...")
             
             embedding_messages = [vector_service_pb2.Embedding(values=emb) for emb in embeddings]
             metadata_messages = [vector_service_pb2.Metadata(data=meta) for meta in metadatas]
@@ -77,7 +85,7 @@ class RAGDistributedClient:
             )
             add_response = self.vector_stub.AddDocuments(add_request)
             
-            print(f"   ✅ {add_response.documents_added} documentos adicionados")
+            print(f"   {add_response.documents_added} documentos adicionados")
             
             return {
                 "status": "success",
@@ -95,19 +103,19 @@ class RAGDistributedClient:
             top_k = self.top_k
         
         print("\n" + "="*60)
-        print(f"💬 QUERY DISTRIBUÍDA (gRPC): {query}")
+        print(f"QUERY DISTRIBUÍDA (gRPC): {query}")
         print("="*60)
         
         try:
             # 1. Gerar embedding da query via gRPC
-            print(f"📡 [gRPC] Gerando embedding...")
+            print(f"[gRPC] Gerando embedding...")
             embed_request = embedding_service_pb2.EmbedQueryRequest(text=query)
             embed_response = self.embedding_stub.EmbedQuery(embed_request)
             query_embedding = list(embed_response.embedding)
-            print(f"   ✅ Embedding gerado")
+            print(f"   Embedding gerado")
             
             # 2. Buscar documentos via gRPC
-            print(f"📡 [gRPC] Buscando documentos...")
+            print(f"[gRPC] Buscando documentos...")
             search_request = vector_service_pb2.SearchRequest(
                 query_embedding=query_embedding,
                 top_k=top_k
@@ -122,7 +130,7 @@ class RAGDistributedClient:
                     'score': doc.score
                 })
             
-            print(f"   ✅ {len(documents)} documentos encontrados")
+            print(f"   {len(documents)} documentos encontrados")
             
             if not documents:
                 return {
@@ -158,14 +166,14 @@ INSTRUÇÕES:
 RESPOSTA:"""
             
             # 4. Gerar resposta via gRPC
-            print(f"📡 [gRPC] Gerando resposta...")
+            print(f"[gRPC] Gerando resposta...")
             generate_request = llm_service_pb2.GenerateRequest(
                 prompt=prompt,
                 temperature=0.7
             )
             generate_response = self.llm_stub.Generate(generate_request)
             answer_text = generate_response.text
-            print(f"   ✅ Resposta gerada")
+            print(f"   Resposta gerada")
             
             # 5. Preparar resposta
             sources = []
@@ -177,7 +185,7 @@ RESPOSTA:"""
                 })
             
             print("="*60)
-            print("✅ RESPOSTA GERADA (DISTRIBUÍDO - gRPC)")
+            print("RESPOSTA GERADA (DISTRIBUÍDO - gRPC)")
             print("="*60 + "\n")
             
             return {
