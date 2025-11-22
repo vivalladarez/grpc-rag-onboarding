@@ -5,41 +5,9 @@ Sistema RAG (Retrieval-Augmented Generation) para onboarding corporativo com **d
 - **Distribuído**: Microserviços com gRPC
 
 ## Arquiteturas
-
-### Arquitetura Monolítica
-```
-┌─────────────────┐
-│  Streamlit UI   │
-└────────┬────────┘
-         │ HTTP
-    ┌────▼────┐
-    │FastAPI  │ :8001
-    └────┬────┘
-         │
-    ┌────▼──────────┐
-    │RAG Pipeline   │
-    ├───────────────┤
-    │• Embeddings   │
-    │• ChromaDB     │
-    │• Ollama LLM   │
-    └───────────────┘
-```
-
-### Arquitetura Distribuída (gRPC)
-```
-┌─────────────────┐
-│  Streamlit UI   │
-└────────┬────────┘
-         │ HTTP
-    ┌────▼────┐
-    │Gateway  │ :8002
-    └──┬───┬──┘
-       │   │  gRPC
-   ┌───▼───┐  ┌────▼────┐  ┌────▼─────┐
-   │Embed  │  │ Vector  │  │   LLM    │
-   │:50051 │  │ :50052  │  │  :50053  │
-   └───────┘  └─────────┘  └──────────┘
-```
+<div align="center">
+  <img width="553" height="389" alt="image" src="https://github.com/user-attachments/assets/4a5e5d36-767e-451b-8d56-73562ea8045c" />
+</div>
 
 ## Estrutura do Projeto
 
