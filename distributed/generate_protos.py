@@ -13,7 +13,7 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 
 proto_files = ["embedding_service.proto", "vector_service.proto", "llm_service.proto"]
 
-print("🔧 Gerando código Python dos .proto...")
+print("Gerando codigo Python dos .proto...")
 
 for proto_file in proto_files:
     proto_path = PROTO_DIR / proto_file
@@ -30,11 +30,11 @@ for proto_file in proto_files:
     result = subprocess.run(cmd, capture_output=True, text=True)
     
     if result.returncode == 0:
-        print(f"   ✅ {proto_file} gerado")
+        print(f"   [OK] {proto_file} gerado")
     else:
-        print(f"   ❌ Erro: {result.stderr}")
+        print(f"   [ERRO] {result.stderr}")
 
 (OUTPUT_DIR / "__init__.py").touch()
 
-print("\n✅ Geração concluída!")
+print("\n[OK] Geracao concluida!")
 
