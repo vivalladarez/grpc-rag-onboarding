@@ -76,7 +76,11 @@ class RAGDistributedClient:
             print(f"[gRPC] Adicionando ao vector store...")
             
             embedding_messages = [vector_service_pb2.Embedding(values=emb) for emb in embeddings]
-            metadata_messages = [vector_service_pb2.Metadata(data=meta) for meta in metadatas]
+            metadata_messages = [
+                vector_service_pb2.Metadata(
+                    data={str(k): str(v) for k, v in meta.items()}
+                ) for meta in metadatas
+            ]
             
             add_request = vector_service_pb2.AddDocumentsRequest(
                 texts=texts,

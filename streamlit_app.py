@@ -33,6 +33,10 @@ if 'last_ingest_mono_error' not in st.session_state:
     st.session_state.last_ingest_mono_error = None
 if 'last_ingest_dist_error' not in st.session_state:
     st.session_state.last_ingest_dist_error = None
+if 'last_ingest_mono_raw' not in st.session_state:
+    st.session_state.last_ingest_mono_raw = None
+if 'last_ingest_dist_raw' not in st.session_state:
+    st.session_state.last_ingest_dist_raw = None
 
 # CSS
 st.markdown("""
@@ -128,15 +132,23 @@ with st.sidebar:
                         )
                         if response.status_code == 200:
                             result = response.json()
-                            st.session_state.last_ingest_mono = result.get('chunks_added', 0)
+                            st.session_state.last_ingest_mono = (
+                                result.get('chunks_added')
+                                or result.get('documents_added')
+                                or result.get('total_chunks')
+                                or 0
+                            )
                             st.session_state.last_ingest_mono_error = None
+                            st.session_state.last_ingest_mono_raw = result
                         else:
                             st.session_state.last_ingest_mono = None
                             st.session_state.last_ingest_mono_error = response.text
+                            st.session_state.last_ingest_mono_raw = None
                             st.error("Erro ao ingerir no monolítico")
                 except Exception as e:
                     st.session_state.last_ingest_mono = None
                     st.session_state.last_ingest_mono_error = str(e)
+                    st.session_state.last_ingest_mono_raw = None
                     st.error(f"Erro: {e}")
         
         with col2:
@@ -150,15 +162,23 @@ with st.sidebar:
                         )
                         if response.status_code == 200:
                             result = response.json()
-                            st.session_state.last_ingest_dist = result.get('chunks_added', 0)
+                            st.session_state.last_ingest_dist = (
+                                result.get('chunks_added')
+                                or result.get('documents_added')
+                                or result.get('total_chunks')
+                                or 0
+                            )
                             st.session_state.last_ingest_dist_error = None
+                            st.session_state.last_ingest_dist_raw = result
                         else:
                             st.session_state.last_ingest_dist = None
                             st.session_state.last_ingest_dist_error = response.text
+                            st.session_state.last_ingest_dist_raw = None
                             st.error("Erro ao ingerir no distribuído")
                 except Exception as e:
                     st.session_state.last_ingest_dist = None
                     st.session_state.last_ingest_dist_error = str(e)
+                    st.session_state.last_ingest_dist_raw = None
                     st.error(f"Erro: {e}")
 
         if st.session_state.last_ingest_mono is not None:
@@ -170,6 +190,10 @@ with st.sidebar:
             st.success(f"Última ingestão distribuída: {st.session_state.last_ingest_dist} chunks.")
         elif st.session_state.last_ingest_dist_error:
             st.warning(f"Distribuído: {st.session_state.last_ingest_dist_error}")
+
+        if st.checkbox("Mostrar resposta bruta da ingestão", value=False):
+            st.write("Monolítico:", st.session_state.get('last_ingest_mono_raw'))
+            st.write("Distribuído:", st.session_state.get('last_ingest_dist_raw'))
     
     st.markdown("---")
     st.caption("Desenvolvido para comparar arquiteturas RAG")
