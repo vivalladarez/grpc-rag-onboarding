@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package llm;
+
+service LLMService {
+  rpc Generate(GenerateRequest) returns (GenerateResponse);
+}
+
+message GenerateRequest {
+  string prompt = 1;
+  float temperature = 2;
+}
+
+message GenerateResponse {
+  string text = 1;
+}
+

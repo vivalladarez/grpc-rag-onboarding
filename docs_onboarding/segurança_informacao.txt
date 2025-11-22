@@ -1,0 +1,77 @@
+POLÍTICA DE SEGURANÇA DA INFORMAÇÃO
+
+A segurança da informação é responsabilidade de todos. Este documento apresenta diretrizes essenciais para proteger dados da empresa e de nossos clientes.
+
+CLASSIFICAÇÃO DA INFORMAÇÃO
+
+Público: Informações que podem ser compartilhadas livremente (materiais de marketing, comunicados públicos).
+
+Interno: Informações de uso interno que não devem ser compartilhadas externamente sem autorização (procedimentos, políticas internas).
+
+Confidencial: Informações sensíveis que requerem proteção especial (dados de clientes, estratégias de negócio, informações financeiras não publicadas).
+
+Restrito: Informações altamente sensíveis com acesso limitado a pessoas específicas (dados pessoais sensíveis, propriedade intelectual crítica, informações legais).
+
+PROTEÇÃO DE SENHAS
+
+Crie senhas fortes com no mínimo 12 caracteres combinando letras, números e símbolos. Nunca reutilize senhas entre sistemas diferentes. Utilize um gerenciador de senhas corporativo para armazenar credenciais com segurança. Altere suas senhas imediatamente se suspeitar de comprometimento.
+
+Nunca compartilhe senhas, mesmo com colegas ou superiores. O departamento de TI nunca solicitará sua senha por e-mail, telefone ou chat. Desconfie de qualquer solicitação deste tipo - pode ser uma tentativa de phishing.
+
+PROTEÇÃO DE DISPOSITIVOS
+
+Equipamentos corporativos devem ter senha de bloqueio ativada. Configure bloqueio automático após 5 minutos de inatividade. Mantenha seu sistema operacional e aplicativos sempre atualizados. Utilize apenas software aprovado pela TI.
+
+Não instale aplicativos de fontes não confiáveis. Evite conectar dispositivos USB desconhecidos. Se encontrar um pen drive abandonado, não conecte - entregue ao departamento de TI.
+
+Para trabalho remoto, certifique-se de que sua rede Wi-Fi doméstica tenha senha forte e criptografia WPA3 ou WPA2. Evite trabalhar com informações confidenciais em redes Wi-Fi públicas, mesmo usando VPN.
+
+SEGURANÇA DE E-MAIL
+
+O e-mail é um dos principais vetores de ataque. Esteja atento a sinais de phishing: remetentes desconhecidos ou suspeitos, erros gramaticais óbvios, solicitações urgentes de informações sensíveis, links encurtados ou suspeitos, anexos inesperados.
+
+Nunca clique em links ou baixe anexos de e-mails não solicitados. Passe o mouse sobre links antes de clicar para verificar o destino real. Se receber um e-mail suspeito, não responda nem clique - reporte ao time de segurança.
+
+COMPARTILHAMENTO DE INFORMAÇÕES
+
+Use apenas canais corporativos aprovados para compartilhar informações de trabalho (e-mail corporativo, Slack, SharePoint). Evite usar e-mail pessoal, WhatsApp pessoal ou outros serviços não aprovados para assuntos corporativos.
+
+Ao compartilhar documentos externamente, verifique permissões e utilize proteção por senha quando apropriado. Não envie informações confidenciais por e-mail sem criptografia adequada.
+
+TRABALHO REMOTO E MOBILIDADE
+
+Quando trabalhar em locais públicos, use filtro de privacidade em seu laptop para evitar visualização não autorizada. Nunca deixe dispositivos corporativos sem supervisão em locais públicos. Ao descartar documentos impressos, use triturador de papel.
+
+Tenha cuidado ao discutir assuntos confidenciais em locais públicos - outras pessoas podem estar ouvindo. Em videochamadas, certifique-se de que informações sensíveis não estejam visíveis ao fundo.
+
+PROTEÇÃO DE DADOS DE CLIENTES
+
+Dados de clientes são extremamente sensíveis e protegidos por leis como LGPD e GDPR. Acesse apenas dados necessários para suas funções. Nunca copie dados de clientes para dispositivos pessoais ou serviços de nuvem não autorizados.
+
+Se precisar processar dados de clientes, faça apenas em ambientes aprovados. Reporte imediatamente qualquer incidente envolvendo dados de clientes ao DPO (Data Protection Officer).
+
+INCIDENTES DE SEGURANÇA
+
+Incidentes podem incluir: perda ou roubo de dispositivo, acesso não autorizado a sistemas, infecção por malware, envio acidental de informações confidenciais, suspeita de comprometimento de credenciais.
+
+Se identificar um incidente de segurança:
+1. Não tente resolver sozinho
+2. Notifique imediatamente o time de segurança (seguranca@empresa.com.br)
+3. Documente o que aconteceu
+4. Siga as instruções do time de segurança
+5. Não tenha medo de reportar - agir rapidamente é essencial
+
+COMPLIANCE E AUDITORIAS
+
+Nossa empresa está sujeita a diversas regulamentações e realiza auditorias periódicas. Coopere plenamente com auditorias internas e externas. Mantenha documentação adequada de suas atividades quando solicitado.
+
+TREINAMENTOS
+
+Todos os colaboradores devem completar treinamento anual de segurança da informação. Treinamentos adicionais são oferecidos conforme necessidade de cada função. Fique atento a comunicados sobre novos treinamentos obrigatórios.
+
+CONSEQUÊNCIAS
+
+Violações da política de segurança podem resultar em ações disciplinares, incluindo advertência, suspensão ou desligamento. Violações graves podem ter implicações legais.
+
+Lembre-se: segurança é responsabilidade de todos. Quando em dúvida, pergunte antes de agir!
+

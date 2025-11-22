@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package embedding;
+
+service EmbeddingService {
+  rpc EmbedQuery(EmbedQueryRequest) returns (EmbedQueryResponse);
+  rpc EmbedTexts(EmbedTextsRequest) returns (EmbedTextsResponse);
+}
+
+message EmbedQueryRequest {
+  string text = 1;
+}
+
+message EmbedQueryResponse {
+  repeated float embedding = 1;
+}
+
+message EmbedTextsRequest {
+  repeated string texts = 1;
+}
+
+message EmbedTextsResponse {
+  repeated Embedding embeddings = 1;
+}
+
+message Embedding {
+  repeated float values = 1;
+}
+

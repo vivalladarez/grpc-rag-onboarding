@@ -1,0 +1,225 @@
+FERRAMENTAS E PLATAFORMAS DE TRABALHO
+
+Este guia apresenta as principais ferramentas que você usará no dia a dia. Familiarize-se com cada uma delas.
+
+COMUNICAÇÃO E COLABORAÇÃO
+
+Slack - Chat Corporativo
+Ferramenta principal para comunicação rápida e colaboração em tempo real. Organize conversas por canais temáticos e mensagens diretas.
+
+Funcionalidades principais:
+- Canais públicos e privados para equipes e projetos
+- Mensagens diretas e grupos
+- Threads para conversas organizadas
+- Compartilhamento de arquivos
+- Integrações com outras ferramentas
+- Chamadas de voz e vídeo básicas
+- Busca avançada de mensagens e arquivos
+
+Dicas: Configure notificações inteligentemente para evitar sobrecarga. Use threads para manter discussões organizadas. Adicione reações emoji para feedback rápido. Configure status para indicar disponibilidade.
+
+Microsoft Teams - Videoconferências
+Plataforma para reuniões virtuais, videochamadas e colaboração em equipe.
+
+Recursos:
+- Videoconferências com até 250 participantes
+- Compartilhamento de tela e controle remoto
+- Gravação de reuniões
+- Backgrounds virtuais e blur
+- Breakout rooms para discussões em grupo
+- Whiteboard colaborativo
+- Transcrição automática de reuniões (em inglês)
+
+Dicas: Teste áudio/vídeo antes de reuniões importantes. Use modo galeria para ver todos os participantes. Aproveite recursos de anotações durante compartilhamento.
+
+Gmail/Outlook - E-mail Corporativo
+E-mail institucional para comunicações formais e externas.
+
+Organize sua caixa:
+- Use pastas/labels para categorizar e-mails
+- Configure filtros automáticos
+- Use flags/estrelas para destacar prioritários
+- Archive e-mails resolvidos (não deixe acumular)
+- Configure assinatura profissional
+
+Etiqueta de e-mail: Assunto claro e descritivo. Saudação adequada. Corpo objetivo. Call-to-action claro quando aplicável. Revisão antes de enviar.
+
+GESTÃO DE PROJETOS
+
+Jira - Gestão de Tarefas e Projetos
+Sistema ágil para rastreamento de trabalho, especialmente projetos de tecnologia.
+
+Conceitos principais:
+- Issues: tarefas, bugs, stories, epics
+- Sprints: ciclos de trabalho
+- Boards: Kanban ou Scrum
+- Workflow: estados das tarefas (To Do, In Progress, Done)
+- Filtros e JQL para buscas avançadas
+
+Como usar: Mantenha tarefas sempre atualizadas. Comente progresso regularmente. Use transições de status apropriadamente. Logue tempo quando aplicável. Link issues relacionadas.
+
+Confluence - Documentação e Wiki
+Base de conhecimento e documentação colaborativa.
+
+Use Confluence para:
+- Documentação de projetos
+- Especificações técnicas
+- Guias e tutoriais
+- Atas de reunião
+- Páginas de equipe
+- Knowledge base
+
+Estrutura: Spaces > Pages > Child Pages. Use templates disponíveis. Organize informação hierarquicamente. Mantenha documentação atualizada. Use macros para enriquecer páginas (tabelas de conteúdo, status, etc).
+
+Trello - Gestão Visual Simples
+Boards Kanban para projetos menores e gestão visual. Alternativa mais simples ao Jira.
+
+Ideal para: Planejamento de eventos. Tracking de processos simples. Organização pessoal. Brainstorming e ideation.
+
+DESENVOLVIMENTO (PARA ÁREAS TÉCNICAS)
+
+GitHub/GitLab - Controle de Versão
+Repositórios Git para código-fonte e controle de versão.
+
+Workflows básicos:
+- Clone de repositórios
+- Branch para features/fixes
+- Commits descritivos
+- Pull Requests para revisão
+- Code reviews colaborativos
+- CI/CD pipelines
+
+Boas práticas: Commits pequenos e frequentes. Mensagens de commit claras. Pull Requests bem documentados. Responda reviews construtivamente. Mantenha branches organizados.
+
+Docker - Containerização
+Plataforma para desenvolvimento e deployment de aplicações em containers.
+
+Conceitos: Images, Containers, Docker Compose. Use para desenvolvimento local consistente. Siga padrões da equipe para dockerfiles.
+
+IDEs e Editores
+Visual Studio Code: Editor popular, leve e extensível. IntelliJ/PyCharm: IDEs poderosas para Java/Python. Sublime Text/Atom: Alternativas leves.
+
+Configure com extensões relevantes para sua stack. Utilize features de debug. Aprenda atalhos de teclado para produtividade.
+
+ARMAZENAMENTO E COMPARTILHAMENTO
+
+Google Drive / SharePoint
+Armazenamento em nuvem para documentos e arquivos corporativos.
+
+Estrutura organizacional: Drives compartilhados por equipe. Pastas organizadas por projeto/tema. Permissões configuradas apropriadamente.
+
+Boas práticas: Salve documentos importantes no Drive compartilhado (não apenas localmente). Use versionamento automático do Google Docs. Compartilhe com permissões apropriadas (view/comment/edit). Organize em pastas lógicas. Nomeie arquivos de forma descritiva.
+
+Google Workspace: Docs, Sheets, Slides para colaboração em tempo real. Múltiplos usuários editando simultaneamente. Comentários e sugestões para feedback. Templates disponíveis para documentos comuns.
+
+FERRAMENTAS DE DESIGN
+
+Figma - Design UI/UX
+Ferramenta colaborativa de design para interfaces e protótipos. Time de design e produto usa extensivamente.
+
+Acesso: Disponível para quem precisa contribuir com design. Colaboradores de outras áreas podem ter acesso view-only.
+
+Adobe Creative Suite
+Photoshop, Illustrator, InDesign para times de marketing e design gráfico. Licenças disponíveis conforme necessidade.
+
+Canva
+Alternativa mais simples para criação de materiais visuais. Útil para apresentações, posts de redes sociais, infográficos simples.
+
+ANÁLISE E DADOS
+
+Tableau / Power BI - Business Intelligence
+Plataformas de visualização de dados e dashboards analíticos.
+
+Use para: Criar relatórios visuais. Dashboards interativos. Análise exploratória de dados. Compartilhar insights com stakeholders.
+
+Acesso conforme função e necessidade.
+
+Google Analytics
+Análise de dados web para times de marketing e produto. Rastreamento de comportamento de usuários. Métricas de conversão. Análise de campanhas.
+
+SQL Clients
+DataGrip, DBeaver, ou pgAdmin para consultas em banco de dados. Acesso a databases conforme função e privilégios.
+
+CRM E VENDAS
+
+Salesforce - CRM
+Plataforma de gestão de relacionamento com clientes. Utilizada por times de vendas, customer success e suporte.
+
+Módulos: Leads, Opportunities, Accounts, Contacts. Cases, Reports, Dashboards.
+
+Mantenha dados sempre atualizados. Documente interações com clientes. Use campos customizados apropriadamente.
+
+AUTOMAÇÃO E PRODUTIVIDADE
+
+Zapier/Make - Automação
+Integração entre aplicações para automatizar workflows repetitivos.
+
+Exemplos: Notificações automáticas entre sistemas. Sincronização de dados. Criação automática de tarefas.
+
+Notion - Organização Pessoal
+Ferramenta flexível para notas, projetos pessoais, organização. Uso pessoal incentivado mas não obrigatório.
+
+Calendly - Agendamento
+Facilita agendamento de reuniões externas. Integra com calendário corporativo.
+
+SEGURANÇA E ACESSO
+
+LastPass / 1Password - Gerenciador de Senhas
+Armazene senhas com segurança. Gere senhas fortes. Compartilhe credenciais de forma segura com equipe.
+
+VPN - Cisco AnyConnect
+Conexão segura para acesso remoto a recursos corporativos. Obrigatória quando trabalhar remotamente e acessar sistemas internos.
+
+Microsoft Authenticator - 2FA
+Autenticação de dois fatores para segurança adicional. Configure para todos os sistemas críticos.
+
+MONITORAMENTO E OBSERVABILIDADE (PARA TI)
+
+Datadog / New Relic - APM
+Monitoramento de performance de aplicações. Métricas, logs, traces. Alertas e dashboards.
+
+PagerDuty - Incident Management
+Sistema de alertas e gestão de incidentes. On-call rotations. Escalation policies.
+
+APRENDIZADO E DESENVOLVIMENTO
+
+LinkedIn Learning
+Plataforma de cursos online. Empresa oferece licenças. Milhares de cursos em tecnologia, negócios, soft skills.
+
+Udemy/Coursera
+Orçamento anual para cursos online. Solicite aprovação do gestor para cursos relevantes.
+
+Pluralsight / O'Reilly
+Para áreas técnicas. Biblioteca extensa de conteúdo tecnológico.
+
+ONBOARDING DAS FERRAMENTAS
+
+Primeira Semana: Você receberá acessos gradualmente. TI configurará ferramentas essenciais. Seu buddy mostrará como usar principais ferramentas.
+
+Treinamentos: Sessões de treinamento disponíveis para ferramentas principais. Tutoriais na intranet. Comunidade interna para dúvidas.
+
+SUPORTE TÉCNICO
+
+Problemas com ferramentas: Primeiro, consulte documentação/FAQ na intranet. Pergunte em canal #ajuda-ti no Slack. Abra ticket em suporte@empresa.com.br para problemas complexos.
+
+Solicitação de novas ferramentas: Discuta necessidade com gestor. Justifique caso de uso. Submeta requisição através do processo de compras.
+
+DICAS DE PRODUTIVIDADE
+
+Domine atalhos de teclado das ferramentas que usa diariamente. Configure integrações entre ferramentas para workflows suaves. Use múltiplos monitores para aumentar produtividade. Mantenha apenas ferramentas necessárias abertas. Configure notificações inteligentemente. Aprenda uma ferramenta por vez - não tente dominar tudo de uma vez.
+
+ETIQUETA DIGITAL
+
+Respeite horários (não envie mensagens urgentes fora do expediente). Use ferramenta apropriada para cada situação. Seja claro e objetivo. Documente decisões importantes. Mantenha profissionalismo mesmo em canais informais.
+
+RECURSOS
+
+Lista completa de ferramentas: intranet.empresa.com.br/ferramentas
+Tutoriais: intranet.empresa.com.br/treinamentos
+Suporte TI: suporte@empresa.com.br ou #ajuda-ti no Slack
+Solicitação de acesso: portal.empresa.com.br/acessos
+
+Seu buddy e equipe são recursos valiosos - não hesite em pedir ajuda para aprender ferramentas!
+
+Lembre-se: ferramentas são meios, não fins. Foque em entregar valor, não em dominar todas as features!
+

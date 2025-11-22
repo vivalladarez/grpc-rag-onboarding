@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package vector;
+
+service VectorService {
+  rpc Search(SearchRequest) returns (SearchResponse);
+  rpc AddDocuments(AddDocumentsRequest) returns (AddDocumentsResponse);
+  rpc GetCount(CountRequest) returns (CountResponse);
+}
+
+message SearchRequest {
+  repeated float query_embedding = 1;
+  int32 top_k = 2;
+}
+
+message SearchResponse {
+  repeated Document documents = 1;
+}
+
+message Document {
+  string text = 1;
+  map<string, string> metadata = 2;
+  float score = 3;
+}
+
+message AddDocumentsRequest {
+  repeated string texts = 1;
+  repeated Embedding embeddings = 2;
+  repeated Metadata metadatas = 3;
+}
+
+message Embedding {
+  repeated float values = 1;
+}
+
+message Metadata {
+  map<string, string> data = 1;
+}
+
+message AddDocumentsResponse {
+  int32 documents_added = 1;
+  int32 total_documents = 2;
+}
+
+message CountRequest {}
+
+message CountResponse {
+  int32 count = 1;
+}
+

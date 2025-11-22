@@ -1,0 +1,103 @@
+CANAIS DE COMUNICAÇÃO INTERNA
+
+A comunicação eficaz é fundamental para nosso sucesso coletivo. Este guia apresenta nossos principais canais e boas práticas de comunicação.
+
+E-MAIL CORPORATIVO
+
+O e-mail é nosso canal oficial para comunicações formais, documentação e comunicação externa. Use para: comunicados oficiais, documentação de decisões, comunicação com clientes e parceiros, solicitações formais e aprovações.
+
+Boas práticas: Verifique e-mails pelo menos 2x ao dia. Responda mensagens em até 24 horas úteis. Use assuntos descritivos e específicos. Seja claro e objetivo no corpo da mensagem. Use CC com moderação. BCC deve ser evitado. Revise antes de enviar - gramática e tom importam.
+
+Evite usar e-mail para: Discussões rápidas (use chat), Conversas em tempo real (use reunião), Mensagens urgentes (use telefone/chat), Assuntos muito complexos (marque reunião).
+
+SLACK - CHAT CORPORATIVO
+
+Nossa ferramenta principal para comunicação rápida e colaboração em tempo real. Organize conversas por canais e mensagens diretas.
+
+Canais Principais:
+- #geral: Anúncios e informações para toda empresa
+- #random: Conversas informais e socialização  
+- #ajuda-ti: Suporte técnico e dúvidas de TI
+- #eventos: Informações sobre eventos corporativos
+- #celebracoes: Reconhecimentos e comemorações
+
+Cada equipe e projeto tem canais específicos. Você será adicionado aos relevantes para sua função. Explore a lista de canais e entre em outros que sejam úteis.
+
+Boas práticas no Slack:
+- Use threads para manter conversas organizadas
+- @mencione pessoas quando precisar de atenção específica
+- Use @channel e @here com moderação (apenas para assuntos urgentes)
+- Configure horário de "Não perturbe" para manter equilíbrio
+- Use status para indicar disponibilidade
+- Adicione reações emoji para feedback rápido
+- Use mensagens diretas para conversas privadas
+- Busque antes de perguntar - sua dúvida pode já ter resposta
+
+Integrações úteis: Google Calendar, Jira, GitHub, Google Drive. Configure notificações para não perder mensagens importantes, mas evite sobrecarga.
+
+MICROSOFT TEAMS
+
+Utilizamos Teams para videoconferências, reuniões e colaboração em documentos. Cada equipe tem um Team com canais, arquivos e guias customizadas.
+
+Recursos principais: Videochamadas individuais e em grupo, Compartilhamento de tela, Gravação de reuniões, Colaboração simultânea em documentos, Chat integrado, Quadro branco digital.
+
+Dicas para reuniões: Teste áudio/vídeo antes de reuniões importantes. Use fones de ouvido para melhor qualidade. Silencie microfone quando não estiver falando. Use vídeo quando possível - aumenta engajamento. Use fundos virtuais se necessário. Seja pontual.
+
+INTRANET CORPORATIVA
+
+Portal centralizado com informações, políticas, notícias e recursos. Acesse em intranet.empresa.com.br.
+
+Seções principais: Notícias e Comunicados, Políticas e Procedimentos, Portal do Colaborador (RH), Base de Conhecimento, Diretório de Funcionários, Calendário Corporativo.
+
+A homepage é atualizada semanalmente com notícias relevantes. Configure alertas para áreas de seu interesse.
+
+JIRA E CONFLUENCE
+
+Jira para gestão de projetos e tarefas. Confluence para documentação e base de conhecimento.
+
+No Jira: Mantenha suas tarefas atualizadas, Use comentários para comunicar progresso, Mencione pessoas com @, Atualize status regularmente, Use labels e componentes adequadamente.
+
+No Confluence: Documente decisões importantes, Crie páginas de conhecimento, Colabore em documentos técnicos, Mantenha documentação atualizada, Use templates disponíveis.
+
+REUNIÕES
+
+Valorizamos tempo de todos. Reuniões devem ser produtivas e necessárias.
+
+Ao agendar reuniões: Defina objetivo claro, Envie agenda prévia, Convide apenas pessoas necessárias, Respeite horários de almoço e fim de dia, Grave se apropriado para quem não pôde comparecer, Envie resumo e action items depois.
+
+Evite: Reuniões sem objetivo claro, Reuniões que poderiam ser e-mails, Reuniões de última hora sem necessidade, Reuniões longas sem pausas (>1h).
+
+Temos "No Meeting Wednesdays" - quartas-feiras reservadas para trabalho focado. Agende reuniões em quartas apenas em casos excepcionais.
+
+ONE-ON-ONES
+
+Reuniões individuais regulares com seu gestor são essenciais. Normalmente quinzenais ou mensais. Use para: Discutir progresso, Dar e receber feedback, Alinhar expectativas, Discutir desenvolvimento de carreira, Trazer preocupações.
+
+Prepare-se antes! Traga tópicos, perguntas e atualizações. Seja honesto e transparente.
+
+COMUNICAÇÃO ASSÍNCRONA
+
+Respeitamos diferentes fusos e horários. Não espere respostas imediatas fora do horário comercial. Use recursos de agendamento para enviar mensagens em horários apropriados. Documente decisões para que outros possam acompanhar.
+
+FEEDBACK E CANAL ABERTO
+
+Temos cultura de feedback aberto e construtivo. Canais formais: Pesquisas de clima trimestrais, Reuniões de feedback 360°, Caixa de sugestões anônima.
+
+Canal de denúncias (Linha Ética): Para reportar violações de código de conduta, assédio, discriminação ou outras questões sérias. Acesse em etica.empresa.com.br ou ligue 0800-XXX-XXXX. Anonimato garantido.
+
+NEWSLETTER INTERNA
+
+Newsletter semanal "Conexão Empresa" enviada todas as sextas-feiras. Inclui: Destaques da semana, Reconhecimentos, Novidades, Eventos futuros, Vagas internas.
+
+Você pode contribuir com conteúdo! Envie sugestões para comunicacao@empresa.com.br.
+
+REDES SOCIAIS CORPORATIVAS
+
+LinkedIn e Twitter corporativos para comunicação externa. Sinta-se à vontade para interagir e compartilhar conteúdo corporativo. Ao postar sobre trabalho em suas redes pessoais, seja profissional e positivo.
+
+DICAS GERAIS
+
+Escolha o canal certo para cada situação. Seja claro e objetivo. Respeite o tempo dos outros. Seja profissional, mas autêntico. Use linguagem inclusiva. Revise antes de enviar. Responda em tempo hábil. Seja proativo na comunicação.
+
+Lembre-se: boa comunicação é fundamental para trabalho em equipe eficaz. Quando em dúvida sobre como comunicar algo, pergunte!
+

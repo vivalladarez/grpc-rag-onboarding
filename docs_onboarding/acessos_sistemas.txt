@@ -1,0 +1,62 @@
+GUIA DE ACESSOS E SISTEMAS
+
+Este documento orienta sobre como solicitar e gerenciar acessos aos sistemas corporativos durante seu onboarding e ao longo de sua jornada na empresa.
+
+PROCESSO DE SOLICITAÇÃO DE ACESSOS
+
+No seu primeiro dia, você receberá credenciais temporárias para acesso inicial. Seu gestor imediato enviará uma solicitação formal ao departamento de TI listando todos os sistemas necessários para sua função. O tempo médio de provisionamento é de 24 a 48 horas úteis.
+
+CREDENCIAIS CORPORATIVAS
+
+Seu login corporativo seguirá o padrão: primeira letra do nome + sobrenome completo (ex: jsilva para João Silva). Você receberá uma senha temporária que deve ser alterada no primeiro acesso. As senhas devem conter no mínimo 12 caracteres, incluindo letras maiúsculas, minúsculas, números e caracteres especiais.
+
+SISTEMAS ESSENCIAIS
+
+E-mail Corporativo: Utilizamos Microsoft 365. Acesse através do navegador em outlook.office.com ou configure em seu aplicativo de e-mail preferido. Seu endereço será seu.nome@empresa.com.br. Você tem direito a 50GB de armazenamento e deve verificar seus e-mails regularmente.
+
+VPN Corporativa: Necessária para acesso remoto a recursos internos. Instale o cliente Cisco AnyConnect e use suas credenciais corporativas. A conexão VPN é obrigatória quando estiver trabalhando fora do escritório e precisar acessar sistemas internos.
+
+Portal do Colaborador: Plataforma centralizada para gestão de benefícios, consulta de holerites, solicitação de férias e atualização de dados cadastrais. Acesse em portal.empresa.com.br com suas credenciais corporativas.
+
+Sistema de Projetos: Utilizamos Jira para gestão de projetos e tarefas. Seu acesso será provisionado conforme sua equipe e projetos atribuídos. Mantenha suas tarefas sempre atualizadas e use labels apropriadas.
+
+SISTEMAS ESPECÍFICOS POR ÁREA
+
+Desenvolvimento: Acesso ao GitHub/GitLab corporativo, ambientes de desenvolvimento, staging e produção (conforme nível de senioridade), ferramentas de CI/CD e monitoramento.
+
+Marketing: Acesso a ferramentas de analytics, plataformas de mídia social, sistemas de CRM e ferramentas de design como Adobe Creative Suite.
+
+Vendas: Acesso ao CRM (Salesforce), sistema de cotações, base de conhecimento de produtos e dashboard de métricas.
+
+Financeiro: Acesso a sistemas ERP, ferramentas de BI, plataformas bancárias corporativas e sistemas de controle orçamentário.
+
+AUTENTICAÇÃO MULTIFATOR (MFA)
+
+Para segurança adicional, todos os sistemas críticos requerem autenticação multifator. Recomendamos usar Microsoft Authenticator, Google Authenticator ou outro app compatível. Configure MFA imediatamente após receber seus acessos.
+
+SOLICITAÇÃO DE NOVOS ACESSOS
+
+Para solicitar acesso a novos sistemas após o onboarding inicial:
+1. Obtenha aprovação do seu gestor direto
+2. Abra um chamado no portal de TI especificando o sistema e justificativa
+3. Aguarde aprovação do gestor responsável pelo sistema
+4. TI provisionará o acesso em até 48 horas
+
+REVISÃO DE ACESSOS
+
+A empresa realiza revisão trimestral de acessos. Gestores recebem lista de acessos de suas equipes e devem confirmar quais permanecem necessários. Acessos não confirmados são automaticamente revogados por segurança.
+
+PROBLEMAS COM ACESSOS
+
+Se você tiver problemas de login ou acesso:
+1. Verifique se está usando as credenciais corretas
+2. Confirme se sua senha não expirou (senhas expiram a cada 90 dias)
+3. Para reset de senha, use o portal de autoatendimento
+4. Se problemas persistirem, contate o suporte de TI através do email suporte@empresa.com.br ou telefone 0800-123-4567
+
+BOAS PRÁTICAS
+
+Nunca compartilhe suas credenciais com ninguém. Mantenha suas senhas seguras e privadas. Não anote senhas em locais visíveis. Faça logout de sistemas quando não estiver usando. Reporte imediatamente qualquer atividade suspeita em suas contas.
+
+Lembre-se: seus acessos são pessoais e intransferíveis. Você é responsável por todas as ações realizadas com suas credenciais!
+

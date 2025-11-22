@@ -1,0 +1,126 @@
+POLÍTICAS DE FÉRIAS, PONTO E AUSÊNCIAS
+
+Este documento explica como funcionam férias, registro de ponto, folgas e diferentes tipos de ausências.
+
+FÉRIAS
+
+Direito a Férias: Após 12 meses de trabalho, você tem direito a 30 dias corridos de férias. Férias podem ser divididas em até 3 períodos, sendo que um deles deve ter no mínimo 14 dias corridos.
+
+Planejamento de Férias: Planeje férias com antecedência mínima de 30 dias. Discuta com seu gestor antes de solicitar formalmente. Considere calendário de projetos e alta temporada de sua área.
+
+Solicitação: Faça solicitação através do Portal do Colaborador. Após aprovação do gestor, RH formalizará. Você receberá confirmação por e-mail com aviso de férias detalhando o período e pagamentos.
+
+Pagamento: Salário de férias é pago até 2 dias antes do início das férias. Inclui remuneração do mês + 1/3 constitucional. Você pode solicitar adiantamento de 13º salário junto com férias.
+
+Venda de Férias: É possível vender até 10 dias (1/3) das férias, recebendo em dinheiro ao invés de descansar. Solicite no momento do pedido de férias se desejar esta opção.
+
+Férias Coletivas: Empresa pode estabelecer férias coletivas, geralmente no final do ano. Será comunicado com antecedência. Descontado de seu saldo de férias ou considerado como licença remunerada.
+
+REGISTRO DE PONTO
+
+Sistema de Ponto: Utilizamos sistema digital de ponto biométrico no escritório e aplicativo mobile para trabalho remoto.
+
+Aplicativo: Baixe "PontoWeb App" e use credenciais corporativas. Bata ponto ao iniciar trabalho, sair/retornar de almoço, e encerrar expediente.
+
+Horário de Trabalho: Jornada padrão é 8 horas diárias, 40 horas semanais. Horário flexível permitido com aprovação do gestor, respeitando core hours (10h-16h).
+
+Intervalos: Intervalo mínimo de 1 hora para almoço é obrigatório. Recomendamos pausas curtas ao longo do dia para saúde e produtividade.
+
+Horas Extras: Devem ser pré-aprovadas pelo gestor. Registradas automaticamente no sistema quando ultrapassar jornada. Compensadas com banco de horas ou pagas conforme legislação.
+
+Banco de Horas: Saldo positivo ou negativo de horas acumula no banco de horas. Deve ser zerado trimestralmente. Use flexibilidade para gerenciar compromissos pessoais.
+
+Inconsistências: Se esquecer de bater ponto, solicite ajuste através do Portal do Colaborador justificando. Gestor deve aprovar. Inconsistências frequentes podem resultar em advertência.
+
+TIPOS DE AUSÊNCIAS
+
+Faltas Justificadas: Não descontadas do salário quando devidamente comprovadas.
+
+Atestado Médico: Até 3 dias consecutivos, apresente atestado ao RH. Acima de 3 dias, entra em afastamento INSS. Atestado deve ser apresentado no primeiro dia de retorno ao trabalho ou enviado digitalmente se ausência prolongada.
+
+Consultas Médicas: Permitidas mediante apresentação de comprovante. Prefira marcar fora do horário de trabalho quando possível. Para consultas durante expediente, compense horário ou use banco de horas.
+
+Luto (Nojo): Até 2 dias consecutivos para falecimento de cônjuge, pais, filhos, irmãos. 1 dia para outros parentes próximos. Apresente certidão de óbito.
+
+Casamento (Gala): 3 dias consecutivos incluindo data do casamento. Avise com antecedência. Apresente certidão de casamento após o evento.
+
+Doação de Sangue: 1 dia a cada 12 meses. Apresente comprovante do hemocentro.
+
+Alistamento Eleitoral: Até 2 dias consecutivos. Apresente comprovante.
+
+Serviço Militar: Conforme convocação. Apresente documentação oficial.
+
+Júri ou Testemunho: Conforme convocação judicial. Apresente intimação.
+
+Acompanhamento Médico: Até 2 dias por ano para acompanhar filho de até 6 anos ou dependente com deficiência em consultas médicas. Apresente comprovante.
+
+Licença-Paternidade: 20 dias corridos para nascimento ou adoção. Solicite ao RH com certidão de nascimento/adoção.
+
+Licença-Maternidade: 180 dias (6 meses) para mães. Solicite ao RH apresentando atestado médico.
+
+Faltas Não Justificadas: Ausências sem justificativa válida são descontadas do salário e podem resultar em ações disciplinares.
+
+AUSÊNCIAS PLANEJADAS
+
+Day-Off de Aniversário: Você tem direito a 1 dia de folga no mês do seu aniversário. Não precisa ser no dia exato. Agende com gestor e registre no sistema.
+
+Folgas Remuneradas: Empresa ocasionalmente concede folgas remuneradas (exemplo: ponte de feriados, fechamento de fim de ano). Comunicado com antecedência.
+
+Licenças Não Remuneradas: Podem ser solicitadas para situações específicas mediante aprovação. Discuta com RH para entender impactos em benefícios e salário.
+
+FERIADOS
+
+Feriados nacionais, estaduais e municipais são respeitados conforme localização do escritório. Calendário anual de feriados disponível na intranet.
+
+Trabalho em Feriado: Se sua função requerer trabalho em feriado, você receberá folga compensatória ou pagamento em dobro conforme legislação.
+
+AFASTAMENTOS
+
+Afastamento INSS: Para atestados acima de 15 dias, benefício é pago pelo INSS. RH orientará sobre processo de abertura. Empresa paga primeiros 15 dias.
+
+Acidente de Trabalho: Reporte imediatamente ao gestor e RH. Documentação específica deve ser preenchida. Benefícios específicos se aplicam.
+
+Licença por Problemas Pessoais: Em situações excepcionais (problemas familiares graves, questões de saúde mental), converse com RH sobre opções. Empresa oferece suporte através do PAE.
+
+GESTÃO DE AUSÊNCIAS REMOTAS
+
+Para trabalhadores remotos: Mantenha mesmo rigor com ponto. Atualize calendário corporativo com ausências. Ajuste status no Slack. Avise equipe com antecedência.
+
+REGISTRO E COMPROVAÇÃO
+
+Todos os tipos de ausência devem ser registrados no Portal do Colaborador. Anexe comprovantes quando necessário. Mantenha cópias de documentos importantes.
+
+RH valida documentação e atualiza registros. Você pode consultar histórico de ausências, saldo de férias e banco de horas no Portal.
+
+PLANEJAMENTO E COMUNICAÇÃO
+
+Planeje ausências com antecedência sempre que possível. Comunique claramente à equipe. Documente handover de responsabilidades. Configure resposta automática de e-mail. Delegue tarefas urgentes.
+
+Seja transparente sobre indisponibilidade para que equipe possa se planejar.
+
+POLÍTICAS ESPECÍFICAS POR ÁREA
+
+Algumas áreas podem ter políticas específicas devido à natureza do trabalho (exemplo: atendimento ao cliente, operações 24/7). Seu gestor esclarecerá particularidades.
+
+DICAS PARA GESTÃO DE TEMPO
+
+Use férias! Descanso é essencial para saúde e produtividade. Não deixe saldo de férias acumular demais.
+
+Planeje férias em períodos de menor movimento quando possível. Respeite períodos críticos de sua área.
+
+Use banco de horas estrategicamente para flexibilidade. Não acumule saldo muito positivo ou negativo - busque equilíbrio.
+
+Seja proativo em comunicar ausências. Planeje com antecedência para minimizar impacto em projetos.
+
+DÚVIDAS E SUPORTE
+
+Para dúvidas sobre férias, ponto ou ausências, contate RH através de rh@empresa.com.br ou ramal 2000.
+
+Para problemas técnicos com sistema de ponto, contate TI através de suporte@empresa.com.br.
+
+Para questões sobre ausências por saúde, consulte setor de medicina ocupacional ou RH.
+
+Seu gestor é primeiro ponto de contato para planejamento de férias e aprovação de ausências.
+
+Lembre-se: equilíbrio entre trabalho e vida pessoal é importante. Use seus direitos de forma responsável e consciente!
+
