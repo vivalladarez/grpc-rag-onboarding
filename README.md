@@ -1,4 +1,4 @@
-# Sistema RAG Comparativo: Monolítico vs Distribuído (gRPC)
+# RAG (Retrieval-Augmented Generation): Monolítico vs Distribuído (gRPC)
 
 Sistema RAG (Retrieval-Augmented Generation) para onboarding corporativo com **duas arquiteturas** para comparação de desempenho:
 - **Monolítico**: Tudo em um processo
