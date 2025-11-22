@@ -3,6 +3,12 @@ API FastAPI Monolítica
 Porta: 8001
 """
 
+import sys
+from pathlib import Path
+
+# Adicionar path para acessar módulo shared
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Optional, List, Dict, Any
