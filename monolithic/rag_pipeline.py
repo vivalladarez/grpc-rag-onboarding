@@ -20,7 +20,7 @@ class RAGMonolithicPipeline:
     
     def __init__(self):
         print("\n" + "="*60)
-        print("🏗️  INICIALIZANDO PIPELINE MONOLÍTICO")
+        print("Inicializando pipeline monolítico")
         print("="*60)
         
         self.embedding_model = EmbeddingModel()
@@ -31,13 +31,13 @@ class RAGMonolithicPipeline:
         self.max_context_length = int(os.getenv('MAX_CONTEXT_LENGTH', '2000'))
         
         print("="*60)
-        print("✅ PIPELINE MONOLÍTICO PRONTO!")
+        print("Pipeline monolítico pronto")
         print("="*60 + "\n")
     
     def ingest_documents(self, file_paths: List[str] = None, 
                         directory_path: str = None) -> Dict[str, Any]:
         """Ingere documentos"""
-        print("\n📥 Ingestão Monolítica")
+        print("\nIngestão monolítica iniciada")
         
         texts, metadatas = process_documents_for_ingestion(file_paths, directory_path)
         
@@ -59,7 +59,7 @@ class RAGMonolithicPipeline:
             top_k = self.top_k
         
         print("\n" + "="*60)
-        print(f"💬 QUERY MONOLÍTICA: {query}")
+        print(f"Consulta monolítica: {query}")
         print("="*60)
         
         # 1. Gerar embedding da query
@@ -128,7 +128,7 @@ RESPOSTA:"""
             })
         
         print("="*60)
-        print("✅ RESPOSTA GERADA (MONOLÍTICO)")
+        print("Resposta gerada no modo monolítico")
         print("="*60 + "\n")
         
         return {

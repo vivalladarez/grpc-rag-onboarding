@@ -58,10 +58,10 @@ def process_documents_for_ingestion(
             ])
     
     if not files_to_process:
-        print("⚠️  Nenhum arquivo encontrado")
+        print("Nenhum arquivo encontrado para ingestão.")
         return [], []
     
-    print(f"📂 Processando {len(files_to_process)} arquivos...")
+    print(f"Processando {len(files_to_process)} arquivos...")
     
     for file_path in files_to_process:
         try:
@@ -80,11 +80,11 @@ def process_documents_for_ingestion(
                     'chunk_id': i
                 })
             
-            print(f"   ✅ {file_name}: {len(chunks)} chunks")
+            print(f"   {file_name}: {len(chunks)} chunks")
         
         except Exception as e:
-            print(f"   ❌ Erro em {file_path}: {e}")
+            print(f"   Erro em {file_path}: {e}")
     
-    print(f"📊 Total: {len(all_texts)} chunks de {len(files_to_process)} arquivos")
+    print(f"Total: {len(all_texts)} chunks de {len(files_to_process)} arquivos processados.")
     return all_texts, all_metadatas
 

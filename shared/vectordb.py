@@ -17,13 +17,13 @@ class VectorDB:
         self.persist_directory = persist_directory
         os.makedirs(persist_directory, exist_ok=True)
         
-        print(f"🗄️  Inicializando ChromaDB: {persist_directory}")
+        print(f"Inicializando ChromaDB em {persist_directory}")
         self.client = chromadb.PersistentClient(path=persist_directory)
         self.collection = self.client.get_or_create_collection(
             name="onboarding_docs",
             metadata={"hnsw:space": "cosine"}
         )
-        print(f"✅ ChromaDB pronto! Documentos: {self.collection.count()}")
+        print(f"ChromaDB pronto. Documentos: {self.collection.count()}")
     
     def add_documents(self, texts: List[str], embeddings: List[List[float]], 
                      metadatas: List[Dict[str, Any]] = None) -> None:
@@ -35,14 +35,14 @@ class VectorDB:
         if metadatas is None:
             metadatas = [{}] * len(texts)
         
-        print(f"📥 Adicionando {len(texts)} documentos...")
+        print(f"Adicionando {len(texts)} documentos ao ChromaDB...")
         self.collection.add(
             documents=texts,
             embeddings=embeddings,
             metadatas=metadatas,
             ids=ids
         )
-        print(f"✅ Documentos adicionados!")
+        print("Documentos adicionados com sucesso.")
     
     def query(self, query_embedding: List[float], n_results: int = 5) -> Dict[str, Any]:
         """Busca vetorial"""
@@ -57,11 +57,11 @@ class VectorDB:
     
     def reset_collection(self) -> None:
         """Reseta coleção"""
-        print("🗑️  Resetando coleção...")
+        print("Resetando coleção do ChromaDB...")
         self.client.delete_collection(name="onboarding_docs")
         self.collection = self.client.get_or_create_collection(
             name="onboarding_docs",
             metadata={"hnsw:space": "cosine"}
         )
-        print("✅ Coleção resetada!")
+        print("Coleção resetada.")
 

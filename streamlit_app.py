@@ -114,7 +114,7 @@ with st.sidebar:
                         )
                         if response.status_code == 200:
                             result = response.json()
-                            st.success(f"✅ {result.get('chunks_added', 0)} chunks!")
+                            st.success(f"{result.get('chunks_added', 0)} chunks ingeridos.")
                         else:
                             st.error("Erro")
                 except Exception as e:
@@ -131,7 +131,7 @@ with st.sidebar:
                         )
                         if response.status_code == 200:
                             result = response.json()
-                            st.success(f"✅ {result.get('chunks_added', 0)} chunks!")
+                            st.success(f"{result.get('chunks_added', 0)} chunks ingeridos.")
                         else:
                             st.error("Erro")
                 except Exception as e:
@@ -255,7 +255,7 @@ with tab1:
     # Query individual Monolítico
     if mono_btn and query:
         st.markdown("---")
-        st.markdown("### 🏗️ Resultado Monolítico")
+        st.markdown("### Resultado Monolítico")
         
         if mono_online:
             with st.spinner("Processando..."):
@@ -264,11 +264,11 @@ with tab1:
                 if result:
                     col1, col2, col3 = st.columns(3)
                     with col1:
-                        st.metric("⏱️ Tempo", f"{elapsed:.3f}s")
+                        st.metric("Tempo", f"{elapsed:.3f}s")
                     with col2:
-                        st.metric("📄 Documentos", result.get('context_used', 0))
+                        st.metric("Documentos", result.get('context_used', 0))
                     with col3:
-                        st.metric("🏗️ Modo", "Monolítico")
+                        st.metric("Modo", "Monolítico")
                     
                     st.markdown("#### Resposta:")
                     st.info(result.get('answer', ''))
@@ -281,12 +281,12 @@ with tab1:
                 else:
                     st.error(f"Erro: {error}")
         else:
-            st.error("⚠️ API Monolítico offline")
+            st.error("API Monolítico offline")
     
     # Query individual Distribuído
     if dist_btn and query:
         st.markdown("---")
-        st.markdown("### 🌐 Resultado Distribuído (gRPC)")
+        st.markdown("### Resultado Distribuído (gRPC)")
         
         if dist_online:
             with st.spinner("Processando via gRPC..."):
@@ -295,11 +295,11 @@ with tab1:
                 if result:
                     col1, col2, col3 = st.columns(3)
                     with col1:
-                        st.metric("⏱️ Tempo", f"{elapsed:.3f}s")
+                        st.metric("Tempo", f"{elapsed:.3f}s")
                     with col2:
-                        st.metric("📄 Documentos", result.get('context_used', 0))
+                        st.metric("Documentos", result.get('context_used', 0))
                     with col3:
-                        st.metric("🌐 Modo", "gRPC")
+                        st.metric("Modo", "gRPC")
                     
                     st.markdown("#### Resposta:")
                     st.info(result.get('answer', ''))
@@ -312,7 +312,7 @@ with tab1:
                 else:
                     st.error(f"Erro: {error}")
         else:
-            st.error("⚠️ API Distribuído offline. Certifique-se de que os serviços gRPC estão rodando!")
+            st.error("API Distribuído offline. Certifique-se de que os serviços gRPC estão rodando!")
 
 
 # ============================================================================
@@ -320,7 +320,7 @@ with tab1:
 # ============================================================================
 
 with tab2:
-    st.markdown("### 📊 Análise de Performance")
+    st.markdown("### Análise de Performance")
     
     if not st.session_state.performance_data:
         st.info("ℹ️ Execute algumas queries para ver as métricas!")
@@ -402,7 +402,7 @@ with tab2:
         # Download CSV
         csv = df_all.to_csv(index=False)
         st.download_button(
-            "📥 Download CSV",
+            "Download CSV",
             csv,
             f"rag_comparison_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
             "text/csv"
@@ -415,11 +415,11 @@ with tab2:
 
 with tab3:
     st.markdown("""
-    ## 🔬 Sistema RAG Comparativo
+    ## Sistema RAG Comparativo
     
     Esta interface compara duas arquiteturas:
     
-    ### 🏗️ Arquitetura Monolítica
+    ### Arquitetura Monolítica
     - **Porta:** 8001
     - **Características:** Tudo em um processo Python
     - **Vantagens:** Baixa latência, simples
@@ -428,15 +428,15 @@ with tab3:
     ### 🌐 Arquitetura Distribuída (gRPC)
     - **Porta:** 8002
     - **Serviços gRPC:**
-      - 🟢 Embedding Service (50051)
-      - 🟡 Vector Service (50052)
-      - 🔵 LLM Service (50053)
+      - Embedding Service (50051)
+      - Vector Service (50052)
+      - LLM Service (50053)
     - **Vantagens:** Escalabilidade horizontal, isolamento
     - **Desvantagens:** Overhead de rede, mais complexo
     
     ---
     
-    ### 🚀 Como Usar
+    ### Como Usar
     
     **1. Iniciar Monolítico:**
     ```bash
@@ -461,12 +461,12 @@ with tab3:
     
     ---
     
-    ### 📊 Comparação
+    ### Comparação
     
-    Use o botão "⚡ Comparar Ambos" para testar ambas as arquiteturas
+    Use o botão "Comparar Ambos" para testar ambas as arquiteturas
     simultaneamente e visualizar métricas de performance!
     """)
 
 st.markdown("---")
-st.caption("© 2025 - Sistema RAG Comparativo")
+st.caption("2025 - Sistema RAG Comparativo")
 

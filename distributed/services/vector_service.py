@@ -18,14 +18,14 @@ from shared.vectordb import VectorDB
 class VectorServicer(vector_service_pb2_grpc.VectorServiceServicer):
     def __init__(self):
         self.vector_db = VectorDB()
-        print(f"✅ Vector Service pronto!")
+        print("Vector Service inicializado.")
     
     def Search(self, request, context):
         try:
             query_embedding = list(request.query_embedding)
             top_k = request.top_k if request.top_k > 0 else 5
             
-            print(f"📡 Search: top_k={top_k}")
+            print(f"Search solicitado com top_k={top_k}")
             results = self.vector_db.query(query_embedding, top_k)
             
             documents = []
@@ -43,7 +43,7 @@ class VectorServicer(vector_service_pb2_grpc.VectorServiceServicer):
             
             return vector_service_pb2.SearchResponse(documents=documents)
         except Exception as e:
-            print(f"❌ Erro: {e}")
+            print(f"Erro durante Search: {e}")
             context.set_code(grpc.StatusCode.INTERNAL)
             return vector_service_pb2.SearchResponse()
     
@@ -53,7 +53,7 @@ class VectorServicer(vector_service_pb2_grpc.VectorServiceServicer):
             embeddings = [list(emb.values) for emb in request.embeddings]
             metadatas = [dict(meta.data) for meta in request.metadatas]
             
-            print(f"📡 AddDocuments: {len(texts)} docs")
+            print(f"AddDocuments recebido com {len(texts)} documentos")
             self.vector_db.add_documents(texts, embeddings, metadatas)
             
             return vector_service_pb2.AddDocumentsResponse(
@@ -61,7 +61,7 @@ class VectorServicer(vector_service_pb2_grpc.VectorServiceServicer):
                 total_documents=self.vector_db.get_document_count()
             )
         except Exception as e:
-            print(f"❌ Erro: {e}")
+            print(f"Erro durante AddDocuments: {e}")
             context.set_code(grpc.StatusCode.INTERNAL)
             return vector_service_pb2.AddDocumentsResponse()
     
@@ -83,7 +83,7 @@ def serve():
     server.start()
     
     print("\n" + "="*60)
-    print("🟡 VECTOR SERVICE RODANDO (gRPC)")
+    print("Vector Service rodando (gRPC)")
     print("="*60)
     print("   Porta: 50052")
     print("="*60 + "\n")
@@ -91,7 +91,7 @@ def serve():
     try:
         server.wait_for_termination()
     except KeyboardInterrupt:
-        print("\n🛑 Parando Vector Service...")
+        print("\nParando Vector Service...")
 
 
 if __name__ == '__main__':
