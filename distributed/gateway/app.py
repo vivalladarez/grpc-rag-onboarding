@@ -3,6 +3,16 @@ API FastAPI Gateway Distribuído
 Porta: 8002
 """
 
+import sys
+from pathlib import Path
+
+# Adicionar paths necessários
+BASE_DIR = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = BASE_DIR.parent
+
+sys.path.insert(0, str(PROJECT_ROOT))
+sys.path.insert(0, str(BASE_DIR / "generated"))
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Optional
