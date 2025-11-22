@@ -25,6 +25,14 @@ if 'history' not in st.session_state:
     st.session_state.history = []
 if 'performance_data' not in st.session_state:
     st.session_state.performance_data = []
+if 'last_ingest_mono' not in st.session_state:
+    st.session_state.last_ingest_mono = None
+if 'last_ingest_dist' not in st.session_state:
+    st.session_state.last_ingest_dist = None
+if 'last_ingest_mono_error' not in st.session_state:
+    st.session_state.last_ingest_mono_error = None
+if 'last_ingest_dist_error' not in st.session_state:
+    st.session_state.last_ingest_dist_error = None
 
 # CSS
 st.markdown("""
@@ -37,12 +45,14 @@ st.markdown("""
 
 
 def check_api(url, name):
-    """Verifica se API está online"""
+    """Verifica se API está online e retorna mensagem de erro detalhada"""
     try:
-        response = requests.get(f"{url}/health", timeout=2)
-        return response.status_code == 200
-    except:
-        return False
+        response = requests.get(f"{url}/health", timeout=5)
+        if response.status_code == 200:
+            return True, None
+        return False, f"{name}: status {response.status_code} - {response.text}"
+    except Exception as e:
+        return False, f"{name}: {e}"
 
 
 def query_api(url, query_text, top_k=5):
@@ -78,8 +88,8 @@ with st.sidebar:
     # Status das APIs
     st.subheader("Status dos Sistemas")
     
-    mono_online = check_api(MONOLITHIC_URL, "Monolítico")
-    dist_online = check_api(DISTRIBUTED_URL, "Distribuído")
+    mono_online, mono_error = check_api(MONOLITHIC_URL, "Monolítico")
+    dist_online, dist_error = check_api(DISTRIBUTED_URL, "Distribuído")
     
     col1, col2 = st.columns(2)
     with col1:
@@ -87,12 +97,16 @@ with st.sidebar:
             st.success("Monolítico OK")
         else:
             st.error("Monolítico OFF")
+            if mono_error:
+                st.caption(mono_error)
     
     with col2:
         if dist_online:
             st.success("Distribuído OK")
         else:
             st.error("Distribuído OFF")
+            if dist_error:
+                st.caption(dist_error)
     
     st.markdown("---")
     
@@ -114,10 +128,15 @@ with st.sidebar:
                         )
                         if response.status_code == 200:
                             result = response.json()
-                            st.success(f"{result.get('chunks_added', 0)} chunks ingeridos.")
+                            st.session_state.last_ingest_mono = result.get('chunks_added', 0)
+                            st.session_state.last_ingest_mono_error = None
                         else:
-                            st.error("Erro")
+                            st.session_state.last_ingest_mono = None
+                            st.session_state.last_ingest_mono_error = response.text
+                            st.error("Erro ao ingerir no monolítico")
                 except Exception as e:
+                    st.session_state.last_ingest_mono = None
+                    st.session_state.last_ingest_mono_error = str(e)
                     st.error(f"Erro: {e}")
         
         with col2:
@@ -131,11 +150,26 @@ with st.sidebar:
                         )
                         if response.status_code == 200:
                             result = response.json()
-                            st.success(f"{result.get('chunks_added', 0)} chunks ingeridos.")
+                            st.session_state.last_ingest_dist = result.get('chunks_added', 0)
+                            st.session_state.last_ingest_dist_error = None
                         else:
-                            st.error("Erro")
+                            st.session_state.last_ingest_dist = None
+                            st.session_state.last_ingest_dist_error = response.text
+                            st.error("Erro ao ingerir no distribuído")
                 except Exception as e:
+                    st.session_state.last_ingest_dist = None
+                    st.session_state.last_ingest_dist_error = str(e)
                     st.error(f"Erro: {e}")
+
+        if st.session_state.last_ingest_mono is not None:
+            st.success(f"Última ingestão monolítica: {st.session_state.last_ingest_mono} chunks.")
+        elif st.session_state.last_ingest_mono_error:
+            st.warning(f"Monolítico: {st.session_state.last_ingest_mono_error}")
+
+        if st.session_state.last_ingest_dist is not None:
+            st.success(f"Última ingestão distribuída: {st.session_state.last_ingest_dist} chunks.")
+        elif st.session_state.last_ingest_dist_error:
+            st.warning(f"Distribuído: {st.session_state.last_ingest_dist_error}")
     
     st.markdown("---")
     st.caption("Desenvolvido para comparar arquiteturas RAG")
