@@ -6,7 +6,7 @@ Sistema RAG (Retrieval-Augmented Generation) para onboarding corporativo com **d
 
 ## Arquiteturas
 <div align="center">
-  <img width="553" height="389" alt="image" src="https://github.com/user-attachments/assets/4a5e5d36-767e-451b-8d56-73562ea8045c" />
+  <img width="553" height="389" alt="image" src="https://github.com/user-attachments/assets/919dc353-7298-4d78-989b-7795f0c7a93b"/>
 </div>
 
 ## Estrutura do Projeto
@@ -14,37 +14,37 @@ Sistema RAG (Retrieval-Augmented Generation) para onboarding corporativo com **d
 ```
 grpc-rag-onboarding/
 │
-├── monolithic/                # Sistema Monolítico
-│   ├── app.py                # FastAPI :8001
-│   └── rag_pipeline.py       # Pipeline RAG completo
+├── monolithic/                        # Sistema Monolítico
+│   ├── app.py                         # FastAPI :8001
+│   └── rag_pipeline.py                # Pipeline RAG completo
 │
-├── distributed/               # Sistema Distribuído
-│   ├── services/             # Microserviços gRPC
-│   │   ├── embedding_service.py  # :50051
-│   │   ├── vector_service.py     # :50052
-│   │   └── llm_service.py        # :50053
-│   ├── gateway/              # Gateway FastAPI
-│   │   ├── app.py           # :8002
-│   │   └── rag_client.py    # Cliente gRPC
-│   ├── protos/               # Protocol Buffers
+├── distributed/                       # Sistema Distribuído
+│   ├── services/                      # Microserviços gRPC
+│   │   ├── embedding_service.py       # :50051
+│   │   ├── vector_service.py          # :50052
+│   │   └── llm_service.py             # :50053
+│   ├── gateway/                       # Gateway FastAPI
+│   │   ├── app.py                     # :8002
+│   │   └── rag_client.py              # Cliente gRPC
+│   ├── protos/                        # Protocol Buffers
 │   │   ├── embedding_service.proto
 │   │   ├── vector_service.proto
 │   │   └── llm_service.proto
-│   ├── generated/            # Código gerado (auto)
-│   └── generate_protos.py   # Script para gerar .proto
+│   ├── generated/                     # Código gerado (auto)
+│   └── generate_protos.py             # Script para gerar .proto
 │
-├── shared/                    # Código compartilhado
-│   ├── embeddings.py         # Modelo de embeddings
-│   ├── vectordb.py           # ChromaDB
-│   ├── llm.py                # Ollama LLM
-│   └── ingest.py             # Processamento de docs
+├── shared/                            # Código compartilhado
+│   ├── embeddings.py                  # Modelo de embeddings
+│   ├── vectordb.py                    # ChromaDB
+│   ├── llm.py                         # Ollama LLM
+│   └── ingest.py                      # Processamento de docs
 │
-├── docs_onboarding/           # Documentos para RAG
+├── docs_onboarding/                   # Documentos para RAG
 │   ├── ferias_e_pontos.txt
 │   ├── beneficios.txt
 │   └── ...
 │
-├── streamlit_app.py           # Interface comparativa
+├── streamlit_app.py                   # Interface Streamlit
 │
 ├── requirements.txt
 └── README.md
@@ -52,12 +52,14 @@ grpc-rag-onboarding/
 
 ## Tecnologias
 
-- **FastAPI**: APIs REST
-- **gRPC + Protocol Buffers**: Comunicação entre microserviços
-- **ChromaDB**: Banco de dados vetorial
-- **Sentence Transformers**: Embeddings (E5 multilingual)
-- **Ollama**: LLM local (Llama 3.2)
-- **Streamlit**: Interface web comparativa
+![FastAPI](https://img.shields.io/badge/FastAPI-000000?style=flat&logo=fastapi&logoColor=FFFFFF)
+![gRPC](https://img.shields.io/badge/gRPC-000000?style=flat&logo=grpc&logoColor=FFFFFF)
+![Protobuf](https://img.shields.io/badge/Protobuf-000000?style=flat&logo=google&logoColor=FFFFFF)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-000000?style=flat&logo=material-design&logoColor=FFFFFF)
+![SentenceTransformers](https://img.shields.io/badge/SentenceTransformers-000000?style=flat&logo=python&logoColor=FFFFFF)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat&logo=ollama&logoColor=FFFFFF)
+![Streamlit](https://img.shields.io/badge/Streamlit-000000?style=flat&logo=streamlit&logoColor=FFFFFF)
+
 
 ## Instalação
 
@@ -65,11 +67,11 @@ grpc-rag-onboarding/
 
 - **Python 3.9+**
 - **Ollama** instalado e rodando:
-  ```bash
+```bash
   # Baixe em: https://ollama.ai
   ollama pull llama3.2:3b
   ollama serve
-  ```
+```
 
 ### 2. Instalar Dependências
 
@@ -80,8 +82,7 @@ cd grpc-rag-onboarding
 
 # Criar ambiente virtual
 python -m venv venv
-venv\Scripts\activate  # Windows
-# source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate  
 
 # Instalar dependências
 pip install -r requirements.txt
@@ -152,8 +153,6 @@ streamlit run streamlit_app.py
 
 Acesse: **http://localhost:8501**
 
-> **Dica**: Você pode executar ambos sistemas (monolítico E distribuído) simultaneamente para comparação em tempo real!
-
 ## Interface Streamlit
 
 A interface permite:
@@ -173,101 +172,6 @@ A interface permite:
 - Analisar overhead de rede gRPC
 - Ingerir novos documentos
 - Download de dados em CSV
-
-## Comparação de Desempenho
-
-| Critério | Monolítico | Distribuído (gRPC) |
-|----------|------------|--------------------|
-| **Latência** | Baixa (~2-3s) | Média (~3-5s) |
-| **Overhead** | Zero | Rede + Serialização |
-| **Escalabilidade** | Vertical | Horizontal |
-| **Complexidade** | Simples | Moderada |
-| **Desenvolvimento** | Rápido | Moderado |
-| **Produção** | Limitado | Recomendado |
-| **Isolamento** | Não | Sim |
-| **Deployment** | Fácil | Requer orquestração |
-
-### Quando Usar Cada Um?
-
-**Use Monolítico quando:**
-- Desenvolvimento rápido / POC
-- Volumes baixos (< 100 req/s)
-- Latência é crítica
-- Equipe pequena
-- Orçamento limitado
-
-**Use Distribuído quando:**
-- Produção de larga escala
-- Alta disponibilidade (99.9%+)
-- Volumes altos (> 1000 req/s)
-- Necessidade de escalar componentes independentemente
-- Equipe com expertise DevOps
-
-## Troubleshooting
-
-### "Ollama não conectado"
-```bash
-# Verificar se Ollama está rodando
-ollama list
-
-# Se não, inicie:
-ollama serve
-# Em outro terminal:
-ollama run llama3.2:3b
-```
-
-### "gRPC Error: UNAVAILABLE"
-**Causa:** Serviços gRPC não estão rodando
-
-**Solução:**
-Inicie todos os serviços gRPC manualmente (consulte seção "Iniciar Sistema Distribuído")
-
-### "No module named 'generated'"
-**Causa:** Código dos .proto não foi gerado
-
-**Solução:**
-```bash
-cd distributed
-python generate_protos.py
-```
-
-### API Monolítico/Distribuído offline no Streamlit
-**Causa:** APIs não foram iniciadas
-
-**Solução:**
-- **Monolítico**: `cd monolithic && python app.py`
-- **Distribuído**: Inicie os 5 serviços conforme seção "Iniciar Sistema Distribuído"
-
-## Testar via API
-
-### API Monolítico (porta 8001)
-
-```bash
-# Health Check
-curl http://localhost:8001/health
-
-# Query
-curl -X POST http://localhost:8001/query \
-  -H "Content-Type: application/json" \
-  -d "{\"query\": \"Como solicitar férias?\", \"top_k\": 5}"
-
-# Ingerir documentos
-curl -X POST http://localhost:8001/ingest \
-  -H "Content-Type: application/json" \
-  -d "{\"directory_path\": \"./docs_onboarding\"}"
-```
-
-### API Distribuído (porta 8002)
-
-```bash
-# Health Check
-curl http://localhost:8002/health
-
-# Query
-curl -X POST http://localhost:8002/query \
-  -H "Content-Type: application/json" \
-  -d "{\"query\": \"Como solicitar férias?\", \"top_k\": 5}"
-```
 
 ## Exemplos de Queries
 
@@ -323,37 +227,4 @@ curl -X POST http://localhost:8002/query \
    - Use o botão "Comparar Ambos"
    - Analise as métricas na aba "Métricas de Performance"
 
-## Documentação das APIs
-
-- **Monolítico**: http://localhost:8001/docs
-- **Distribuído**: http://localhost:8002/docs
-
-## Contribuindo
-
-1. Fork o projeto
-2. Crie uma branch (`git checkout -b feature/nova-funcionalidade`)
-3. Commit (`git commit -am 'Adiciona funcionalidade'`)
-4. Push (`git push origin feature/nova-funcionalidade`)
-5. Abra um Pull Request
-
-## Licença
-
-MIT License
-
-## Próximos Passos
-
-- [ ] Adicionar autenticação
-- [ ] Implementar rate limiting
-- [ ] Adicionar monitoring (Prometheus)
-- [ ] Deploy com Docker/Kubernetes
-- [ ] Implementar caching
-- [ ] Testes automatizados
-- [ ] Suporte a mais formatos de documentos
-- [ ] Service mesh (Istio)
-
----
-
-**Desenvolvido para demonstrar e comparar arquiteturas RAG**
-
-**GitHub**: https://github.com/vivalladarez/grpc-rag-onboarding
 
