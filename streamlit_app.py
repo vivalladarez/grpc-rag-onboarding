@@ -136,6 +136,11 @@ def build_cumulative_latency_df(entries):
     return pd.DataFrame(records)
 
 
+@st.cache_data(show_spinner=False)
+def cached_latency_df(entries):
+    return build_cumulative_latency_df(entries)
+
+
 def quality_summary(log):
     if not log:
         return None
@@ -170,7 +175,7 @@ def failure_count_by_arch(log, arch_label: str):
 
 def sample_resource_usage():
     """Coleta CPU, memória e rede do sistema"""
-    cpu = psutil.cpu_percent(interval=0.2)
+    cpu = psutil.cpu_percent(interval=0.05)
     memory = psutil.virtual_memory()
     net = psutil.net_io_counters()
     prev_net = st.session_state.net_io_snapshot
@@ -646,8 +651,9 @@ with tab_operations:
 
 with tab_analytics:
     st.markdown("### Indicadores por Arquitetura")
-    mono_entries = [entry for entry in st.session_state.performance_data if entry.get("mode") == "monolithic"]
-    dist_entries = [entry for entry in st.session_state.performance_data if entry.get("mode") == "distributed"]
+    perf_window = st.session_state.performance_data[-200:]
+    mono_entries = [entry for entry in perf_window if entry.get("mode") == "monolithic"]
+    dist_entries = [entry for entry in perf_window if entry.get("mode") == "distributed"]
     mono_quality = quality_summary_by_arch(st.session_state.quality_log, "monolithic")
     dist_quality = quality_summary_by_arch(st.session_state.quality_log, "distributed")
     mono_throughput = latest_throughput_result("monolithic")
@@ -679,7 +685,7 @@ with tab_analytics:
 
     st.markdown("---")
     st.subheader("Latência end-to-end")
-    latency_df = build_cumulative_latency_df(st.session_state.performance_data)
+    latency_df = cached_latency_df(st.session_state.performance_data)
     if latency_df.empty:
         st.info("Ainda não há dados de latência. Execute algumas consultas primeiro.")
     else:
@@ -768,7 +774,7 @@ with tab_analytics:
         )
 
     if st.session_state.resource_history:
-        res_df = pd.DataFrame(st.session_state.resource_history)
+        res_df = pd.DataFrame(st.session_state.resource_history[-200:])
         perf_df = res_df.melt(
             id_vars="timestamp",
             value_vars=["cpu_percent", "memory_percent"],
