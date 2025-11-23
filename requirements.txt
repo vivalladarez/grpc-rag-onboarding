@@ -8,6 +8,7 @@ requests==2.31.0
 streamlit==1.28.0
 plotly==5.17.0
 pandas==2.1.1
+psutil==5.9.5
 
 # gRPC
 grpcio==1.60.0
